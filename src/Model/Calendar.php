@@ -71,7 +71,7 @@ class Calendar
      */
     public function __construct()
     {
-        $this->timezone = new \DateTimeZone('America/New_York');
+        $this->timezone = new \DateTimeZone(config('app.timezone'));
         $this->events = new Provider();
         $this->todos = new Provider();
         $this->freeBusy = new Provider();
